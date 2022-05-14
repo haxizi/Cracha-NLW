@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+}
+
+:root{
+  --black-scuro: #121214;
+  --black: hsl(240, 6%, 13%);
+  --grey: #E1E1E6;
+}
+.smash{
+  display: none;
+}
+.range{
+  display: none;
+}
+
+html,
+body {
+  display: grid;
+  place-items: center;
+}
+body {
+  background-color: var(--black);
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+main {
+  background: url(./assets/Mobile.svg);
+  width: 375px;
+  height: 812px;
+}
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+.avatar {
+  width: 10rem;
+  margin: 10.5rem auto 0;
+
+  position: relative;
+}
+.avatar span {
+  position: absolute;
+  left: 1px;
+  z-index: 1;
+}
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 80%, 50% 100%, 0 80%);
+}
+h1 {
+  font-size: 24px;
+  margin-top: 20px;
+  font-weight: 700;
+}
+a {
+  color: var(--grey);
+  text-decoration: none;
+  font-size: 16px;
+
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 4px;
+}
+p {
+  color: var(--grey);
+  margin-top: 32px;
+}
+ul{
+  margin-top: 74px;
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+@media (min-width: 540px) {
+    body{
+      width: 100%;
+      background: url(./assets/Desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position:center;
+      
+      background-color: var(--black-scuro);
+      display: grid;
+      place-items: center; 
+    }
+    
+    div .img{
+      position: absolute;
+      width: 100%;
+    } 
+
+    main{
+      position: relative;
+      top: 140px;
+      width: 358px;
+      height: 540px;
+      background: url(./assets/mask.svg);
+      background-color: var(--black);
+    }
+
+   .avatar{
+      margin: auto;
+      padding: 54px 0;
+      margin-bottom: -25px;
+    }
+
+    h1{
+      margin-top: initial;
+      position: relative;
+      top: -5px
+    }
+
+    p{
+      margin-top: 27px;
+    }
+    
+    ul{
+      margin-top: 40px;
+    }
+
+    .smash{
+      display: initial;
+
+      display: flex;
+      justify-content: center;
+      margin-top: 16px;
+    }
+    .range {
+      display: flex;
+      justify-content: center;
+      margin-top: -164px;
+    }
+    
+    
+}
