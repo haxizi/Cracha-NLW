@@ -20,14 +20,14 @@ body {
   place-items: center;
 }
 body {
-  background-color: var(--black);
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 main {
-  background: url(./assets/Mobile.svg);
-  width: 375px;
-  height: 812px;
+  background: url(./assets/Mobile.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
 }
 .container {
   max-width: 250px;
@@ -89,7 +89,7 @@ ul{
 
 
 
-@media (min-width: 540px) {
+@media (min-width: 720px) {
     body{
       width: 100%;
       background: url(./assets/Desktop.svg);
@@ -106,13 +106,17 @@ ul{
       position: absolute;
       width: 100%;
     } 
-
+    main {
+      width: 0l;
+      min-height: 0;
+      height: 0l;
+    }
     main{
       position: relative;
       top: 140px;
       width: 358px;
       height: 540px;
-      background: url(./assets/mask.svg);
+      background: url(./assets/mask.svg)no-repeat;
       background-color: var(--black);
     }
 
